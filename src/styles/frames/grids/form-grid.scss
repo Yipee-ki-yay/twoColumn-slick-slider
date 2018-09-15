@@ -1,0 +1,86 @@
+.standard-form {
+	label,
+	.label {
+		display: block;
+		margin-bottom: 5px;
+		font-size: $labelFontSize;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		span {
+			font-size: 0.8em;
+			color: $descriptionTextColor;
+			text-transform: none;
+		}
+	}
+
+	.form-title {
+		font-family: $secondaryFont;
+		font-size: $formTitleFontSize;
+		margin-bottom: 15px;
+	}
+
+	.formRow {
+		input + input {margin-top: 25px;}
+		select + select {margin-top: 25px;}
+
+		&.flex {flex-direction: column;}
+
+		.formBlock {
+			box-sizing: border-box;
+		}
+	}
+
+	.checkbox {
+		input {
+			width: 15px;
+			height: auto;
+			display: inline-block;
+		}
+		label {
+			display: inline-block;
+			border: none;
+			margin-bottom: 0;
+			margin-left: 5px;
+		}
+	}
+
+	.formBlock {}
+
+	.formBlock + .formBlock {margin-top: 15px;}
+
+	.formRow + .formRow {
+		margin-top: 25px;
+	}
+
+	.submitButtonWrapper {
+		margin-top: 20px;
+	}
+
+
+	@media (min-width: 767px) {
+		.formRow {
+			&.flex {flex-direction: row;}
+
+			.formBlock {
+				flex-basis: 50%;
+			}
+		}
+
+		.formBlock + .formBlock {
+			margin-top: 0;
+			padding-left: 15px;
+		}
+	}
+
+	@media (min-width: 991px) {
+		
+
+		label,
+		.label {
+			
+			font-size: $labelFontSize992;
+		}
+
+	}
+}
