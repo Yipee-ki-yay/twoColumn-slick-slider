@@ -15,7 +15,7 @@
 
 // var test = 'include js error';
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
 	// console.log('document ready')
 	// popupOrder = document.getElementById('popupOrder');
 	
@@ -105,9 +105,9 @@ $(document).ready(function() {
 	
 	if (window.innerWidth < 768) {
 		(function() {
-			if (! $('.main-slider-mobile').length) return;
+			if (! jQuery('.main-slider-mobile').length) return;
 
-			$('.main-slider-mobile').slick({
+			jQuery('.main-slider-mobile').slick({
 				arrows: false,
 				dots: true,
 				vertical: true
@@ -117,12 +117,12 @@ $(document).ready(function() {
 
 	if (window.innerWidth >= 768) {
 		(function() {
-			if(! $('.main-slider-desctop').length) return;
+			if(! jQuery('.main-slider-desctop').length) return;
 
-			let $sliderDesctop = $('.main-slider-desctop');
+			let sliderDesctop = jQuery('.main-slider-desctop');
 			let counter = 0;
 
-			$sliderDesctop.slick({
+			sliderDesctop.slick({
 				arrows: false,
 				dots: true,
 				fade: true,
@@ -132,19 +132,19 @@ $(document).ready(function() {
 			});
 
 			// setTimeout(function() {
-			// 	$sliderDesctop.find('.slider-desctop-item:first-child').addClass('animated');				
+			// 	sliderDesctop.find('.slider-desctop-item:first-child').addClass('animated');				
 			// }, 10);
 
-			$sliderDesctop.on('beforeChange', function(event, slick, currentSlide) {	
-				$(slick['$slides'][currentSlide]).removeClass('animated');					
+			sliderDesctop.on('beforeChange', function(event, slick, currentSlide) {	
+				jQuery(slick['$slides'][currentSlide]).removeClass('animated');					
 			});
 
-			$sliderDesctop.on('afterChange', function(event, slick, currentSlide) {
-				$(slick['$slides'][currentSlide]).addClass('animated');	
+			sliderDesctop.on('afterChange', function(event, slick, currentSlide) {
+				jQuery(slick['$slides'][currentSlide]).addClass('animated');	
 
 				counter++;
 				if(counter == slick['$slides'].length) {
-					$(this).slick('slickSetOption', 'autoplay', false);
+					jQuery(this).slick('slickSetOption', 'autoplay', false);
 				}
 
 			});
@@ -157,5 +157,5 @@ $(document).ready(function() {
 
 // window.onload = function() {
 	// console.log('window load')
-	// $('#page-preloader').fadeOut('slow');
+	// jQuery('#page-preloader').fadeOut('slow');
 // }
