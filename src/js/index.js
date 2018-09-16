@@ -1,31 +1,31 @@
-let status = "JS - OK!";
-function cl(arg1, arg2, arg3, arg4) {
-	console.log(arg1, arg2 || '', arg3 || '', arg4 || '');
-	return '-';
-}
+// let status = "JS - OK!";
+// function cl(arg1, arg2, arg3, arg4) {
+// 	console.log(arg1, arg2 || '', arg3 || '', arg4 || '');
+// 	return '-';
+// }
 
-cl(status);
+// cl(status);
 
-var PopupModule, RecentFunctions, ValidationModule;
-var AccordionModule;
-var AnimateBorder;
+// var PopupModule, RecentFunctions, ValidationModule;
+// var AccordionModule;
+// var AnimateBorder;
 
-var popupOrder,
-		modals, pageOverlay;
+// var popupOrder,
+// 		modals, pageOverlay;
 
-var test = 'include js error';
+// var test = 'include js error';
 
 $(document).ready(function() {
-	console.log('document ready')
-	popupOrder = document.getElementById('popupOrder');
+	// console.log('document ready')
+	// popupOrder = document.getElementById('popupOrder');
 	
-	modals = document.getElementsByClassName('popup');
-	pageOverlay = document.getElementById('pageOverlay');
+	// modals = document.getElementsByClassName('popup');
+	// pageOverlay = document.getElementById('pageOverlay');
 
 
 	// =================Include Modules==============================
 
-	@@include('testModule.js')
+	// @@include('testModule.js')
 
 	/*@@include('frames/RecentFunctionsModule.js')*/
 	/*@@include('frames/toggleButtonContent.js')*/
@@ -45,37 +45,37 @@ $(document).ready(function() {
 	
 		// console.log('window load')
 
-	if ($('body')) {console.log('jQuery OK')}
-	console.log(test);
+	// if ($('body')) {console.log('jQuery OK')}
+	// console.log(test);
 
 
   // ---------Popups Block-------
 
-	$('body').on('click', '.orderButton', function() {
-  	// e.preventDefault();
-  	if (popupOrder) {
-  		PopupModule.openPopup(popupOrder);
-  	}
-  });
+	// $('body').on('click', '.orderButton', function() {
+ //  	// e.preventDefault();
+ //  	if (popupOrder) {
+ //  		PopupModule.openPopup(popupOrder);
+ //  	}
+ //  });
 
   // ---------Accordion Blocks-------
-	$('accordionBlockSelector').on('click', '.buttonSelector', function(e) {
-		// console.time('click accordion working time');
+	// $('accordionBlockSelector').on('click', '.buttonSelector', function(e) {
+	// 	// console.time('click accordion working time');
 
-		if (document.documentElement.clientWidth < 992) {
-			e.stopPropagation();
-			let submenuBlock = this.nextElementSibling;
-			let button = this;
+	// 	if (document.documentElement.clientWidth < 992) {
+	// 		e.stopPropagation();
+	// 		let submenuBlock = this.nextElementSibling;
+	// 		let button = this;
 
-		// let siblingsBlocks = document.querySelectorAll('#publicInfoPage article.publicInfo-block .titleBlock + .hiddenContent');
+	// 	// let siblingsBlocks = document.querySelectorAll('#publicInfoPage article.publicInfo-block .titleBlock + .hiddenContent');
 
-			toggleButtonContent(button);
-			AccordionModule.toggleContent("withoutSiblings", button, submenuBlock );
-			// AccordionModule.toggleContent("withSiblings", button, submenuBlock, siblingsBlocks );				
+	// 		toggleButtonContent(button);
+	// 		AccordionModule.toggleContent("withoutSiblings", button, submenuBlock );
+	// 		// AccordionModule.toggleContent("withSiblings", button, submenuBlock, siblingsBlocks );				
 
-		}
-		// console.timeEnd('click accordion working time');
-	})
+	// 	}
+	// 	// console.timeEnd('click accordion working time');
+	// })
 
   // ---------Text Limit-------
 	// let textBlocks = document.querySelectorAll('.selector');
@@ -126,14 +126,14 @@ $(document).ready(function() {
 				arrows: false,
 				dots: true,
 				fade: true,
-				speed: 900,
+				speed: 600,
 				autoplay: true,
 		    autoplaySpeed: 4000,
 			});
 
-			setTimeout(function() {
-				$sliderDesctop.find('.slider-desctop-item:first-child').addClass('animated');				
-			}, 10);
+			// setTimeout(function() {
+			// 	$sliderDesctop.find('.slider-desctop-item:first-child').addClass('animated');				
+			// }, 10);
 
 			$sliderDesctop.on('beforeChange', function(event, slick, currentSlide) {	
 				$(slick['$slides'][currentSlide]).removeClass('animated');					
@@ -155,7 +155,7 @@ $(document).ready(function() {
 });
 
 
-window.onload = function() {
-	console.log('window load')
+// window.onload = function() {
+	// console.log('window load')
 	// $('#page-preloader').fadeOut('slow');
-}
+// }

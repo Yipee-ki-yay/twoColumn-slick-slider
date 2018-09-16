@@ -264,12 +264,12 @@ gulp.task('copyProd:css', function () {
 
 gulp.task('purgecss', () => {
   return gulp.src(['production/css/main.min.css',path.src.purgingcss])
-       .pipe(
-            purgecss({
-                content: ['production/*.html'],
-                whitelistPatterns: [/\bjs_/, /active/, /\bslick-/, /\bicon-/, /\bchosen-/, /\bcbox/, /colorbox/, /\blombard/, /\bgm/]
-            })
-        )
+       // .pipe(
+       //      purgecss({
+       //          content: ['production/*.html'],
+       //          whitelistPatterns: [/\bjs_/, /active/, /\bslick-/, /\bicon-/, /\bchosen-/, /\bcbox/, /colorbox/, /\blombard/, /\bgm/]
+       //      })
+       //  )
        .pipe(gulp.dest('production/css/'))
        .pipe(size({ title: 'styles size after purge =' })) 
 
