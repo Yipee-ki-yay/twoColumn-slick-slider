@@ -110,7 +110,6 @@ jQuery(document).ready(function() {
 			jQuery('.main-slider-mobile').slick({
 				arrows: false,
 				dots: true,
-				vertical: true
 			});
 		})();
 	}
@@ -120,7 +119,7 @@ jQuery(document).ready(function() {
 			if(! jQuery('.main-slider-desctop').length) return;
 
 			let sliderDesctop = jQuery('.main-slider-desctop');
-			let counter = 0;
+			let counter = 0;			
 
 			sliderDesctop.slick({
 				arrows: false,
@@ -130,6 +129,15 @@ jQuery(document).ready(function() {
 				autoplay: true,
 		    autoplaySpeed: 4000,
 			});
+
+			// begin custom numbers dots
+			let sliderDots = jQuery('.slick-dots li button');
+			
+			for (let i = 0; i < sliderDots.length; i++) {
+				$(sliderDots[i]).text(i);	
+			}
+			jQuery('.slick-dots li:first-child').css('display', 'none');
+			// end custom numbers dots
 
 			// setTimeout(function() {
 			// 	sliderDesctop.find('.slider-desctop-item:first-child').addClass('animated');				
